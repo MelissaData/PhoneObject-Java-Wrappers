@@ -326,6 +326,12 @@ public final static class MailboxLookupMode {
 		return mdGlobalPhoneJNI.GetDatabaseDate(I);
 	}
 
+	public boolean Lookup(String phone) {
+		return mdGlobalPhoneJNI.Lookup(I,phone,"0","0");
+	}
+	public boolean Lookup(String phone, String country) {
+		return mdGlobalPhoneJNI.Lookup(I,phone,country,"0");
+	}
 	public boolean Lookup(String phone, String country, String origcountry) {
 		return mdGlobalPhoneJNI.Lookup(I,phone,country,origcountry);
 	}
@@ -394,6 +400,9 @@ public final static class MailboxLookupMode {
 		return mdGlobalPhoneJNI.GetResults(I);
 	}
 
+	public String GetResultCodeDescription(String resultCode) {
+		return mdGlobalPhoneJNI.GetResultCodeDescription(I,resultCode,0);
+	}
 	public String GetResultCodeDescription(String resultCode, mdGlobalPhone.ResultCdDescOpt opt) {
 		return mdGlobalPhoneJNI.GetResultCodeDescription(I,resultCode,opt.toValue());
 	}

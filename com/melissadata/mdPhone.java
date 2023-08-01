@@ -326,6 +326,9 @@ public final static class MailboxLookupMode {
 		return mdPhoneJNI.GetDatabaseDate(I);
 	}
 
+	public boolean Lookup(String phone) {
+		return mdPhoneJNI.Lookup(I,phone,"0");
+	}
 	public boolean Lookup(String phone, String zip) {
 		return mdPhoneJNI.Lookup(I,phone,zip);
 	}
@@ -414,6 +417,9 @@ public final static class MailboxLookupMode {
 		return mdPhoneJNI.GetResults(I);
 	}
 
+	public String GetResultCodeDescription(String resultCode) {
+		return mdPhoneJNI.GetResultCodeDescription(I,resultCode,0);
+	}
 	public String GetResultCodeDescription(String resultCode, mdPhone.ResultCdDescOpt opt) {
 		return mdPhoneJNI.GetResultCodeDescription(I,resultCode,opt.toValue());
 	}
