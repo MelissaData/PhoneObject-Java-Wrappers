@@ -327,7 +327,7 @@ public final static class MailboxLookupMode {
 	}
 
 	public boolean Lookup(String phone) {
-		return mdPhoneJNI.Lookup(I,phone,"0");
+		return mdPhoneJNI.Lookup(I,phone,"");
 	}
 	public boolean Lookup(String phone, String zip) {
 		return mdPhoneJNI.Lookup(I,phone,zip);

@@ -327,10 +327,10 @@ public final static class MailboxLookupMode {
 	}
 
 	public boolean Lookup(String phone) {
-		return mdGlobalPhoneJNI.Lookup(I,phone,"0","0");
+		return mdGlobalPhoneJNI.Lookup(I,phone,"","");
 	}
 	public boolean Lookup(String phone, String country) {
-		return mdGlobalPhoneJNI.Lookup(I,phone,country,"0");
+		return mdGlobalPhoneJNI.Lookup(I,phone,country,"");
 	}
 	public boolean Lookup(String phone, String country, String origcountry) {
 		return mdGlobalPhoneJNI.Lookup(I,phone,country,origcountry);
