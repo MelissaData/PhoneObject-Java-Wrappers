@@ -13,6 +13,7 @@ For further details, please visit: https://wiki.melissadata.com/images/5/53/DQT_
 - Windows 10 64-bit Java 19, Microsoft Visual C++ 19.34, Powershell 5.1
 - Ubuntu Linux 20.04.04 LTS 64-bit Java 20, gcc 9.4.0 
 - Melissa Phone Object for 2024-01
+- Wrapper file(s) have not changed since 2023-09
 
 ## Getting Started
 These instructions will get you a copy of the wrappers needed to run the Java Phone Object on your local machine. 
