@@ -12,7 +12,7 @@ For further details, please visit: https://wiki.melissadata.com/images/5/53/DQT_
 ## Tested Environments
 - Windows 10 64-bit Java 19, Microsoft Visual C++ 19.34, Powershell 5.1
 - Ubuntu Linux 20.04.04 LTS 64-bit Java 20, gcc 9.4.0 
-- Melissa Phone Object for 2024-05
+- Melissa Phone Object for 2024-06
 - Wrapper file(s) have not changed since 2023-09
 
 ## Getting Started
