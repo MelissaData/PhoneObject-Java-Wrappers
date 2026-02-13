@@ -5,23 +5,23 @@ This is the code for you to run Phone Object in Java.
     
 Please feel free to copy or embed this code to your own project. Happy coding!
 
-For latest Melissa Phone Object release notes, please visit: https://releasenotes.melissa.com/on-premise-api/phone-object/
+To view the latest Melissa Phone Object release notes or to subscribe to product notifications, please visit: https://releasenotes.melissa.com/on-premise-api/phone-object/
 
 For further details, please visit: https://wiki.melissadata.com/images/5/53/DQT_API_Phone_RG.pdf
 
 ## Tested Environments
-- Windows 10 64-bit Java 19, Microsoft Visual C++ 19.34, Powershell 5.1
+- Windows 11 64-bit Java 19, Microsoft Visual C++ 19.34, Powershell 5.1
 - Ubuntu Linux 20.04.04 LTS 64-bit Java 20, gcc 9.4.0 
-- Melissa Phone Object for 2026-01
-- Wrapper file(s) have not changed since 2023-09
+- Melissa Phone Object for 2026-02
+- Wrapper file(s) have not changed since 2026-02
 
 ## Getting Started
 These instructions will get you a copy of the wrappers needed to run the Java Phone Object on your local machine. 
 
 ### Download this project
 ```
-git clone https://github.com/MelissaData/PhoneObject-Java-Wrappers
-cd PhoneObject-Java-Wrappers
+git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/java/melissaphoneobjectjavawrappers
+cd melissaphoneobjectjavawrappers
 ```
 
 ### Copy wrappers to your project folder
