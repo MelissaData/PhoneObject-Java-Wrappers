@@ -20,8 +20,8 @@ These instructions will get you a copy of the wrappers needed to run the Java Ph
 
 ### Download this project
 ```
-git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/java/melissaphoneobjectjavawrappers
-cd melissaphoneobjectjavawrappers
+git clone https://github.com/MelissaData/PhoneObject-Java-Wrappers
+cd PhoneObject-Java-Wrappers
 ```
 
 ### Copy wrappers to your project folder
