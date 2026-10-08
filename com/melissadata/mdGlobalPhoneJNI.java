@@ -36,4 +36,5 @@ public class mdGlobalPhoneJNI {
 	public final static native String GetLongitude(long I);
 	public final static native String GetResults(long I);
 	public final static native String GetResultCodeDescription(long I,String resultCode,int opt);
+	public final static native String GetPhoneType(long I);
 }

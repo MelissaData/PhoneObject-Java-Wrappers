@@ -288,3 +288,7 @@ extern "C" JNIEXPORT jstring JNICALL Java_com_melissadata_mdGlobalPhoneJNI_GetRe
 	return UnicodeString(jEnv,((mdGlobalPhone*) I)->GetResultCodeDescription(_resultCode.GetUtf8Ptr(),(mdGlobalPhone::ResultCdDescOpt) opt));
 }
 
+extern "C" JNIEXPORT jstring JNICALL Java_com_melissadata_mdGlobalPhoneJNI_GetPhoneType(JNIEnv* jEnv,jclass /*jCls*/,jlong I) {
+	return UnicodeString(jEnv,((mdGlobalPhone*) I)->GetPhoneType());
+}
+

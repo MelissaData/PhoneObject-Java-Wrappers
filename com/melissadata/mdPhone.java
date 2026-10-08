@@ -12,276 +12,68 @@ public class mdPhone {
 		delete();
 	}
 
-public final static class ProgramStatus {
-	public final static mdPhone.ProgramStatus ErrorNone=new mdPhone.ProgramStatus("ErrorNone",0);
-	public final static mdPhone.ProgramStatus ErrorOther=new mdPhone.ProgramStatus("ErrorOther",1);
-	public final static mdPhone.ProgramStatus ErrorOutOfMemory=new mdPhone.ProgramStatus("ErrorOutOfMemory",2);
-	public final static mdPhone.ProgramStatus ErrorRequiredFileNotFound=new mdPhone.ProgramStatus("ErrorRequiredFileNotFound",3);
-	public final static mdPhone.ProgramStatus ErrorFoundOldFile=new mdPhone.ProgramStatus("ErrorFoundOldFile",4);
-	public final static mdPhone.ProgramStatus ErrorDatabaseExpired=new mdPhone.ProgramStatus("ErrorDatabaseExpired",5);
-	public final static mdPhone.ProgramStatus ErrorLicenseExpired=new mdPhone.ProgramStatus("ErrorLicenseExpired",6);
+	public final static class ProgramStatus {
+		public final static mdPhone.ProgramStatus ErrorNone=new mdPhone.ProgramStatus("ErrorNone",0);
+		public final static mdPhone.ProgramStatus ErrorOther=new mdPhone.ProgramStatus("ErrorOther",1);
+		public final static mdPhone.ProgramStatus ErrorOutOfMemory=new mdPhone.ProgramStatus("ErrorOutOfMemory",2);
+		public final static mdPhone.ProgramStatus ErrorRequiredFileNotFound=new mdPhone.ProgramStatus("ErrorRequiredFileNotFound",3);
+		public final static mdPhone.ProgramStatus ErrorFoundOldFile=new mdPhone.ProgramStatus("ErrorFoundOldFile",4);
+		public final static mdPhone.ProgramStatus ErrorDatabaseExpired=new mdPhone.ProgramStatus("ErrorDatabaseExpired",5);
+		public final static mdPhone.ProgramStatus ErrorLicenseExpired=new mdPhone.ProgramStatus("ErrorLicenseExpired",6);
 
-	private final String enumName;
-	private final int enumValue;
-	private static ProgramStatus[] enumValues={ErrorNone,ErrorOther,ErrorOutOfMemory,ErrorRequiredFileNotFound,ErrorFoundOldFile,ErrorDatabaseExpired,ErrorLicenseExpired};
+		private final String enumName;
+		private final int enumValue;
+		private static ProgramStatus[] enumValues={ErrorNone,ErrorOther,ErrorOutOfMemory,ErrorRequiredFileNotFound,ErrorFoundOldFile,ErrorDatabaseExpired,ErrorLicenseExpired};
 
-	private ProgramStatus(String name,int val) {
-		enumName=name;
-		enumValue=val;
+		private ProgramStatus(String name,int val) {
+			enumName=name;
+			enumValue=val;
+		}
+
+		public static ProgramStatus toEnum(int val) {
+			for (int i=0;i<enumValues.length;i++)
+				if (enumValues[i].enumValue==val)
+					return enumValues[i];
+			throw new IllegalArgumentException("No enum "+ProgramStatus.class+" with value "+val+".");
+		}
+
+		public String toString() {
+			return enumName;
+		}
+
+		public int toValue() {
+			return enumValue;
+		}
 	}
 
-	public static ProgramStatus toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+ProgramStatus.class+" with value "+val+".");
+	public final static class ResultCdDescOpt {
+		public final static mdPhone.ResultCdDescOpt ResultCodeDescriptionLong=new mdPhone.ResultCdDescOpt("ResultCodeDescriptionLong",0);
+		public final static mdPhone.ResultCdDescOpt ResultCodeDescriptionShort=new mdPhone.ResultCdDescOpt("ResultCodeDescriptionShort",1);
+
+		private final String enumName;
+		private final int enumValue;
+		private static ResultCdDescOpt[] enumValues={ResultCodeDescriptionLong,ResultCodeDescriptionShort};
+
+		private ResultCdDescOpt(String name,int val) {
+			enumName=name;
+			enumValue=val;
+		}
+
+		public static ResultCdDescOpt toEnum(int val) {
+			for (int i=0;i<enumValues.length;i++)
+				if (enumValues[i].enumValue==val)
+					return enumValues[i];
+			throw new IllegalArgumentException("No enum "+ResultCdDescOpt.class+" with value "+val+".");
+		}
+
+		public String toString() {
+			return enumName;
+		}
+
+		public int toValue() {
+			return enumValue;
+		}
 	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
-
-public final static class AccessType {
-	public final static mdPhone.AccessType Local=new mdPhone.AccessType("Local",0);
-	public final static mdPhone.AccessType Remote=new mdPhone.AccessType("Remote",1);
-
-	private final String enumName;
-	private final int enumValue;
-	private static AccessType[] enumValues={Local,Remote};
-
-	private AccessType(String name,int val) {
-		enumName=name;
-		enumValue=val;
-	}
-
-	public static AccessType toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+AccessType.class+" with value "+val+".");
-	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
-
-public final static class DiacriticsMode {
-	public final static mdPhone.DiacriticsMode Auto=new mdPhone.DiacriticsMode("Auto",0);
-	public final static mdPhone.DiacriticsMode On=new mdPhone.DiacriticsMode("On",1);
-	public final static mdPhone.DiacriticsMode Off=new mdPhone.DiacriticsMode("Off",2);
-
-	private final String enumName;
-	private final int enumValue;
-	private static DiacriticsMode[] enumValues={Auto,On,Off};
-
-	private DiacriticsMode(String name,int val) {
-		enumName=name;
-		enumValue=val;
-	}
-
-	public static DiacriticsMode toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+DiacriticsMode.class+" with value "+val+".");
-	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
-
-public final static class StandardizeMode {
-	public final static mdPhone.StandardizeMode ShortFormat=new mdPhone.StandardizeMode("ShortFormat",0);
-	public final static mdPhone.StandardizeMode LongFormat=new mdPhone.StandardizeMode("LongFormat",1);
-	public final static mdPhone.StandardizeMode AutoFormat=new mdPhone.StandardizeMode("AutoFormat",2);
-
-	private final String enumName;
-	private final int enumValue;
-	private static StandardizeMode[] enumValues={ShortFormat,LongFormat,AutoFormat};
-
-	private StandardizeMode(String name,int val) {
-		enumName=name;
-		enumValue=val;
-	}
-
-	public static StandardizeMode toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+StandardizeMode.class+" with value "+val+".");
-	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
-
-public final static class SuiteParseMode {
-	public final static mdPhone.SuiteParseMode ParseSuite=new mdPhone.SuiteParseMode("ParseSuite",0);
-	public final static mdPhone.SuiteParseMode CombineSuite=new mdPhone.SuiteParseMode("CombineSuite",1);
-
-	private final String enumName;
-	private final int enumValue;
-	private static SuiteParseMode[] enumValues={ParseSuite,CombineSuite};
-
-	private SuiteParseMode(String name,int val) {
-		enumName=name;
-		enumValue=val;
-	}
-
-	public static SuiteParseMode toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+SuiteParseMode.class+" with value "+val+".");
-	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
-
-public final static class AliasPreserveMode {
-	public final static mdPhone.AliasPreserveMode ConvertAlias=new mdPhone.AliasPreserveMode("ConvertAlias",0);
-	public final static mdPhone.AliasPreserveMode PreserveAlias=new mdPhone.AliasPreserveMode("PreserveAlias",1);
-
-	private final String enumName;
-	private final int enumValue;
-	private static AliasPreserveMode[] enumValues={ConvertAlias,PreserveAlias};
-
-	private AliasPreserveMode(String name,int val) {
-		enumName=name;
-		enumValue=val;
-	}
-
-	public static AliasPreserveMode toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+AliasPreserveMode.class+" with value "+val+".");
-	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
-
-public final static class AutoCompletionMode {
-	public final static mdPhone.AutoCompletionMode AutoCompleteSingleSuite=new mdPhone.AutoCompletionMode("AutoCompleteSingleSuite",0);
-	public final static mdPhone.AutoCompletionMode AutoCompleteRangedSuite=new mdPhone.AutoCompletionMode("AutoCompleteRangedSuite",1);
-	public final static mdPhone.AutoCompletionMode AutoCompletePlaceHolderSuite=new mdPhone.AutoCompletionMode("AutoCompletePlaceHolderSuite",2);
-	public final static mdPhone.AutoCompletionMode AutoCompleteNoSuite=new mdPhone.AutoCompletionMode("AutoCompleteNoSuite",3);
-
-	private final String enumName;
-	private final int enumValue;
-	private static AutoCompletionMode[] enumValues={AutoCompleteSingleSuite,AutoCompleteRangedSuite,AutoCompletePlaceHolderSuite,AutoCompleteNoSuite};
-
-	private AutoCompletionMode(String name,int val) {
-		enumName=name;
-		enumValue=val;
-	}
-
-	public static AutoCompletionMode toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+AutoCompletionMode.class+" with value "+val+".");
-	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
-
-public final static class ResultCdDescOpt {
-	public final static mdPhone.ResultCdDescOpt ResultCodeDescriptionLong=new mdPhone.ResultCdDescOpt("ResultCodeDescriptionLong",0);
-	public final static mdPhone.ResultCdDescOpt ResultCodeDescriptionShort=new mdPhone.ResultCdDescOpt("ResultCodeDescriptionShort",1);
-
-	private final String enumName;
-	private final int enumValue;
-	private static ResultCdDescOpt[] enumValues={ResultCodeDescriptionLong,ResultCodeDescriptionShort};
-
-	private ResultCdDescOpt(String name,int val) {
-		enumName=name;
-		enumValue=val;
-	}
-
-	public static ResultCdDescOpt toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+ResultCdDescOpt.class+" with value "+val+".");
-	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
-
-public final static class MailboxLookupMode {
-	public final static mdPhone.MailboxLookupMode MailboxNone=new mdPhone.MailboxLookupMode("MailboxNone",0);
-	public final static mdPhone.MailboxLookupMode MailboxExpress=new mdPhone.MailboxLookupMode("MailboxExpress",1);
-	public final static mdPhone.MailboxLookupMode MailboxPremium=new mdPhone.MailboxLookupMode("MailboxPremium",2);
-
-	private final String enumName;
-	private final int enumValue;
-	private static MailboxLookupMode[] enumValues={MailboxNone,MailboxExpress,MailboxPremium};
-
-	private MailboxLookupMode(String name,int val) {
-		enumName=name;
-		enumValue=val;
-	}
-
-	public static MailboxLookupMode toEnum(int val) {
-		for (int i=0;i<enumValues.length;i++)
-			if (enumValues[i].enumValue==val)
-				return enumValues[i];
-		throw new IllegalArgumentException("No enum "+MailboxLookupMode.class+" with value "+val+".");
-	}
-
-	public String toString() {
-		return enumName;
-	}
-
-	public int toValue() {
-		return enumValue;
-	}
-}
 
 	protected mdPhone(long i,boolean own) {
 		ownMemory=own;
